@@ -47,3 +47,13 @@ footer {
     font-weight: bold;
     font-size: 18px;
 }
+
+#copyright-footer {
+    font-weight: normal;
+    text-align: center;
+    font-size: 12px;
+}
+
+#github-link:link, #freecodecamp-project-link:link, #github-link:visited, #freecodecamp-project-link:visited {
+    color: #332929;
+}
