@@ -1,0 +1,148 @@
+html {background-color: #EEEEEE; font-family: "Lato";}
+body {margin: 0;}
+#header {
+    /* make navbar sticky */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    /* position items using flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* set color */
+    background-color: #EEEEEE;
+    padding: 20px 0 20px 0;
+}
+#header-img {
+    max-width: 300px;
+}
+.nav-link {
+    font-size: 18px;
+    margin: 0 10px 0 10px;
+}
+
+#main {
+    display: block;
+    max-width: 1000px;
+    height: auto;
+    margin: 90px auto;
+}
+#page-header {text-align: center;}
+#form {
+    display: grid;
+    place-items: center;
+    line-height: 2;
+}
+#email {
+    width: 300px; height: 30px; font-size: 18px; padding-left: 5px;
+}
+    
+#submit {
+    width: 170px; height: 30px; margin-top: 10px;
+    border: none; background-color: #FEC606; outline: none;
+    font-size: 18px; font-family: inherit; font-weight: bold; text-transform: uppercase;
+}
+#features {
+    display: grid;
+    margin: 1rem 0 1rem 0;
+    grid-template-rows: repeat(3, 1fr);
+}
+.feature {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-areas:
+      "icon description";
+    align-items: center;
+}
+.feature-desc {margin: 0; font-size: px; grid-area: description;}
+.feature-icon {
+    grid-area: icon;
+    color: #ff8c00;
+    /* center icons */
+    display: grid;
+    justify-self: center;
+}
+
+@media (max-width: 650px) {
+    /* make navbar two-lines */
+    #header {flex-direction: column;}
+    #nav-bar {display: flex; flex-direction: column;}
+    .nav-link {margin: 5px 0 5px 0;}
+    /* update #main margin-top */
+    #main {margin-top: 160px;}
+}
+#pricing {
+    height: auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.offer {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+}
+.offer-title {
+    text-align: center;
+}
+.offer-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+.offer-desc {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.offer-button {
+    width: 100px; height: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffca38; border: none;
+}
+.offer-button:hover, #submit:hover {
+    animation-name: button-animation;
+    animation-duration: 2s;
+}
+
+@keyframes button-animation {
+    from {
+        background-color: #ffca38;
+    }
+    to {
+        background-color: #ffa500;
+    }
+}
+
+.footer {
+    /* position items using flexbox */
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    /* set color */
+    background-color: #dddddd;
+    padding: 20px 20px 20px;
+    line-height: 0px;
+}
+.footer-links:visited, .footer-links:link, .footer-links, .link  {
+    text-decoration: none;
+    color: black;
+}
+
+#how-it-works {
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+}
+#copyright-footer {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#github-link:link, #freecodecamp-project-link:link, #github-link:visited, #freecodecamp-project-link:visited {
+    color: #332929;
+}
