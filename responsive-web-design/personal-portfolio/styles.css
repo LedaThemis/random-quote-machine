@@ -102,7 +102,6 @@ body {margin: 0px; padding: 0px;}
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 0;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -151,3 +150,10 @@ footer {
     font-size: 18px;
     color: #f0f0f0;
 }
+
+@media (max-width: 800px) {
+    #welcome-section {
+        background: linear-gradient(62deg, #70a9ff 0%, #181719 100%);
+    }
+}
+  
