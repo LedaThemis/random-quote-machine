@@ -1,7 +1,13 @@
 import "./styles/App.css";
 
+import QuoteBox from "./components/QuoteBox";
+
 function App() {
-  return <h1>CRA-TEMPLATE-LEDA</h1>;
+  return (
+    <main>
+      <QuoteBox />
+    </main>
+  );
 }
 
 export default App;
