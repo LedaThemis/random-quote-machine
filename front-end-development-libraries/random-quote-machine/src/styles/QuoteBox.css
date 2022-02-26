@@ -1,12 +1,55 @@
 #quote-box {
-  background-color: azure;
+  background-color: rgb(136, 57, 173);
   min-width: 300px;
   width: 50vw;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 10px 7px black;
+  padding: 2vw;
+  border-radius: 0.5vw;
+  box-shadow: 0.5vw 0.8vw 2px 1px rgba(0, 0, 255, 0.2);
+  align-self: center;
+  color: white;
 }
 #text {
-  font-size: 2rem;
+  color: white;
+
+  line-height: 1.5;
+  font-size: 2vw;
   font-family: "Roboto Serif";
+  font-weight: 400;
+}
+
+.icon {
+  width: 2vw;
+  filter: invert(100%) sepia(94%) saturate(2%) hue-rotate(225deg)
+    brightness(104%) contrast(100%);
+}
+
+#quote-icon {
+  margin-right: 0.5vw;
+}
+#tweet-quote {
+  width: 2vw;
+}
+#twitter-icon {
+  margin: 0;
+  padding: 0;
+}
+
+#author {
+  font-family: "Roboto Serif";
+  font-size: 1.5vw;
+  font-weight: 200;
+}
+
+#regenerate-icon {
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+a {
+  display: flex;
 }
