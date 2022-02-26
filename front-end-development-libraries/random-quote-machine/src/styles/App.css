@@ -1,0 +1,14 @@
+.main-container {
+  padding: 0;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  justify-items: center;
+}
+
+#page-title {
+  text-align: center;
+  font-size: 3vw;
+  font-family: "Roboto Serif";
+  font-weight: 200;
+}
