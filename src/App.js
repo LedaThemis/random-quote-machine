@@ -1,4 +1,5 @@
 import "./styles/App.css";
+import quotes from "./data/quotes.js";
 import React from "react";
 import QuoteBox from "./components/QuoteBox";
 
@@ -10,19 +11,14 @@ function App() {
   });
   const [quoteCount, setQuoteCount] = React.useState(0);
 
-  React.useEffect(
-    () =>
-      fetch("http://api.quotable.io/random")
-        .then((res) => res.json())
-        .then((x) =>
-          setQuote({
-            id: x._id,
-            text: x.content,
-            author: x.author,
-          })
-        ),
-    [quoteCount]
-  );
+  React.useEffect(() => {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    setQuote({
+      id: randomQuote._id,
+      text: randomQuote.content,
+      author: randomQuote.author,
+    });
+  }, [quoteCount]);
 
   function handleRegenerate() {
     setQuoteCount((prevCount) => prevCount + 1);
