@@ -9,9 +9,6 @@ export default function QuoteBox() {
         Remember no one can make you feel inferior without your consent.
       </p>
       <p id="author">Eleanor Roosevelt</p>
-      <button id="new-quote">
-        Remember no one can make you feel inferior without your consent.
-      </button>
       <a
         id="tweet-quote"
         href="https://twitter.com/intent/tweet"
@@ -20,6 +17,7 @@ export default function QuoteBox() {
       >
         Tweet
       </a>
+      <button id="new-quote">NEW</button>
     </div>
   );
 }

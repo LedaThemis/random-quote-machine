@@ -1,4 +1,12 @@
 #quote-box {
-  background-color: antiquewhite;
-  min-width: 500px;
+  background-color: azure;
+  min-width: 300px;
+  width: 50vw;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 10px 7px black;
+}
+#text {
+  font-size: 2rem;
+  font-family: "Roboto Serif";
 }
