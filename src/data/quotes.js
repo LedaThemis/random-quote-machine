@@ -1,4 +1,4 @@
-export default [
+const quotes = [
   {
     _id: "juG0aJTnYxmf",
     content:
@@ -4835,3 +4835,4 @@ export default [
     length: 46,
   },
 ];
+export default quotes;
