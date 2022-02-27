@@ -7,5 +7,5 @@
     <a href="https://github.com/LedaThemis" 
     target="_blank"
     rel="noopener noreferrer">Leda</a> (originally for <a href="https://freecodecamp.org" rel="noopener noreferrer" target="_blank">freeCodeCamp</a>), and is published under the 
-    <a href="./blob/master/LICENSE">MIT License</a>
+    <a href="./LICENSE">MIT License</a>
 </p>
