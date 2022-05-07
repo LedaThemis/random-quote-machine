@@ -13,7 +13,7 @@ function App() {
   const [isFetchingQuote, setIsFetchingQuote] = React.useState(false);
 
   const getRandomQuote = async () => {
-    const quoteData = await fetch('http://api.quotable.io/random');
+    const quoteData = await fetch('https://api.quotable.io/random');
     const { _id, content, author } = await quoteData.json();
     return { id: _id, text: content, author: author };
   };
