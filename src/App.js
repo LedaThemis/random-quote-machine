@@ -1,6 +1,7 @@
 import './styles/App.css';
 import React from 'react';
 import QuoteBox from './components/QuoteBox';
+import LoadingOverlay from 'react-loading-overlay';
 
 function App() {
   const [quote, setQuote] = React.useState({
@@ -9,6 +10,7 @@ function App() {
     author: '',
   });
   const [quoteCount, setQuoteCount] = React.useState(0);
+  const [isFetchingQuote, setIsFetchingQuote] = React.useState(false);
 
   const getRandomQuote = async () => {
     const quoteData = await fetch('http://api.quotable.io/random');
@@ -18,12 +20,14 @@ function App() {
 
   React.useEffect(() => {
     (async () => {
+      setIsFetchingQuote(true);
       const randomQuote = await getRandomQuote();
       setQuote({
         id: randomQuote.id,
         text: randomQuote.text,
         author: randomQuote.author,
       });
+      setIsFetchingQuote(false);
     })();
   }, [quoteCount]);
 
@@ -34,7 +38,9 @@ function App() {
     <main className="main-container">
       <div style={{ display: 'grid', placeItems: 'center' }}>
         <h1 id="page-title">Random Quote Machine</h1>
-        <QuoteBox author={quote.author} quote={quote.text} handleRegenerate={handleRegenerate} />
+        <LoadingOverlay active={isFetchingQuote} spinner fadeSpeed={250}>
+          <QuoteBox author={quote.author} quote={quote.text} handleRegenerate={handleRegenerate} />
+        </LoadingOverlay>
       </div>
     </main>
   );
