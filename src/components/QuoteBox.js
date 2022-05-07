@@ -1,34 +1,27 @@
-import React from "react";
+import React from 'react';
 
-import "../styles/QuoteBox.css";
+import '../styles/QuoteBox.css';
 
 export default function QuoteBox(props) {
   return (
     <div id="quote-box">
       <p id="text">
-        <svg
-          id="quote-icon"
-          className="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-        >
+        <svg id="quote-icon" className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z" />
         </svg>
         {props.quote}
       </p>
-      <p id="author">- {props.author}</p>
+      <p id="author">
+        <span className="unselectable">- </span>
+        {props.author}
+      </p>
       <div className="buttons">
         <a
           href={`https://twitter.com/intent/tweet?hashtags=quotes&text="${props.quote}" - ${props.author}`}
           target="_blank"
           rel="noreferrer"
         >
-          <svg
-            id="twitter-icon"
-            className="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
+          <svg id="twitter-icon" className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
           </svg>
         </a>

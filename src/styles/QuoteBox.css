@@ -53,3 +53,7 @@
 a {
   display: flex;
 }
+
+.unselectable {
+  user-select: none;
+}
